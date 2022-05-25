@@ -130,3 +130,115 @@ h1 {
 .card.flip .back-view {
   transform: rotateY(0);
 }
+
+/* MEDIA QUERY */
+@media (max-width: 690px) {
+  /* Wrapper */
+  .wrapper {
+    height: 600px;
+    width: 600px;
+  }
+  /* Back view */
+  .card .back-view img {
+    max-width: 85px;
+  }
+}
+
+@media (max-width: 619px) {
+  /* Wrapper */
+
+  .wrapper {
+    height: 550px;
+    width: 550px;
+  }
+  /* Back view */
+
+  .card .back-view img {
+    max-width: 75px;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: calc(50 / 16 * 1rem);
+  }
+  /* Wrapper */
+
+  .wrapper {
+    height: 500px;
+    width: 500px;
+  }
+  /* Front View */
+  .card .front-view span {
+    font-size: calc(45 / 16 * 1rem);
+  }
+  /* Back view */
+  .card .back-view img {
+    max-width: 70px;
+  }
+}
+
+@media (max-width: 510px) {
+  h1 {
+    font-size: calc(40 / 16 * 1rem);
+  }
+  /* Wrapper */
+
+  .wrapper {
+    height: 450px;
+    width: 450px;
+  }
+  /* Front View */
+  .card .front-view span {
+    font-size: calc(40 / 16 * 1rem);
+  }
+  /* Back view */
+  .card .back-view img {
+    max-width: 60px;
+  }
+}
+@media (max-width: 455px) {
+  /* Wrapper */
+
+  .wrapper {
+    height: 410px;
+    width: 410px;
+  }
+  /* Back view */
+  .card .back-view img {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: calc(30 / 16 * 1rem);
+  }
+  /* Wrapper */
+
+  .wrapper {
+    height: 380px;
+    width: 380px;
+  }
+  /* Front View */
+  .card .front-view span {
+    font-size: calc(35 / 16 * 1rem);
+  }
+  /* Back view */
+  .card .back-view img {
+    max-width: 45px;
+  }
+}
+
+@media (max-width: 385px) {
+  /* Wrapper */
+
+  .wrapper {
+    height: 350px;
+    width: 350px;
+  }
+  /* Back view */
+  .card .back-view img {
+    max-width: 42px;
+  }
+}
