@@ -52,3 +52,17 @@ function matchCards(img1, img2) {
     disableDeck = false;
   }, 1200);
 }
+// Shuffle Cards
+function shuffleCard() {
+  matchedCard = 0;
+  cardOne = cardTwo = "";
+  cards.forEach((card) => {
+    card.classList.remove("flip");
+    card.addEventListener("click", flipCard);
+  });
+}
+
+// Adding click event to all cards
+cards.forEach((card) => {
+  card.addEventListener("click", flipCard);
+});
