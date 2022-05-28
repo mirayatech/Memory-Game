@@ -208,7 +208,7 @@ body {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.103);
 }
 
-.retry h1 {
+.retry h2 {
   color: #3b3b3b;
   font-size: calc(25 / 16 * 1rem);
   padding: 15px 0 30px 0;
@@ -361,7 +361,9 @@ body {
     font-size: calc(50 / 16 * 1rem);
   }
   /* card-wrapper */
-
+  .players-lives h1 {
+    font-size: calc(30 / 16 * 1rem);
+  }
   .card-wrapper {
     height: 500px;
     width: 500px;
@@ -373,6 +375,27 @@ body {
   /* Back view */
   .card .back-view img {
     max-width: 70px;
+  }
+
+  /* Replay and Retry */
+
+  .replay,
+  .retry {
+    padding: 30px;
+    max-width: 450px;
+  }
+
+  .replay h2,
+  .retry h2 {
+    font-size: calc(22 / 16 * 1rem);
+    padding: 15px 0 30px 0;
+  }
+
+  .replay img {
+    width: 130px;
+  }
+  .retry img {
+    width: 80px;
   }
 }
 
@@ -395,9 +418,21 @@ body {
     max-width: 60px;
   }
 }
+@media (max-width: 480px) {
+  /* Replay and Retry */
+
+  .replay,
+  .retry {
+    padding: 30px;
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 455px) {
   /* card-wrapper */
-
+  .players-lives h1 {
+    font-size: calc(25 / 16 * 1rem);
+  }
   .card-wrapper {
     height: 410px;
     width: 410px;
@@ -437,6 +472,35 @@ body {
   .footer-link:visited {
     font-size: 0.8rem;
   }
+
+  /* Replay and Retry */
+
+  .replay,
+  .retry {
+    padding: 30px;
+    max-width: 350px;
+  }
+
+  .replay h2,
+  .retry h2 {
+    color: #3b3b3b;
+    font-size: calc(20 / 16 * 1rem);
+    padding: 15px 0 30px 0;
+  }
+
+  .replay img {
+    width: 130px;
+  }
+  .retry img {
+    width: 95px;
+  }
+
+  .replay button,
+  .retry button {
+    width: 90px;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 385px) {
@@ -449,5 +513,13 @@ body {
   /* Back view */
   .card .back-view img {
     max-width: 42px;
+  }
+
+  /* Replay and Retry */
+
+  .replay,
+  .retry {
+    padding: 30px 10px;
+    max-width: 330px;
   }
 }
