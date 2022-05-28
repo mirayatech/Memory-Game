@@ -38,7 +38,7 @@ h1 {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.103);
 }
 .popup h2 {
-  background: -webkit-linear-gradient(#e6e6e6, #a3a3a3);
+  background: -webkit-linear-gradient(#ebe9e9, #a3a3a3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -48,7 +48,12 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.popup p {
+  text-align: justify;
+  padding: 15px 0;
+  font-weight: 500;
+  color: #333;
+}
 /* Wrapper */
 
 .wrapper {
