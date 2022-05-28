@@ -357,9 +357,6 @@ body {
 }
 
 @media (max-width: 560px) {
-  h1 {
-    font-size: calc(50 / 16 * 1rem);
-  }
   /* card-wrapper */
   .players-lives h1 {
     font-size: calc(30 / 16 * 1rem);
@@ -400,8 +397,23 @@ body {
 }
 
 @media (max-width: 510px) {
-  h1 {
-    font-size: calc(40 / 16 * 1rem);
+  /* POP UP */
+  .popup {
+    padding: 30px;
+    max-width: 430px;
+  }
+  .popup h2 {
+    font-size: calc(23 / 16 * 1rem);
+  }
+
+  .popup p {
+    font-size: 1rem;
+  }
+
+  .popup button {
+    width: 100px;
+    padding: 8px;
+    font-size: 0.9rem;
   }
   /* card-wrapper */
 
@@ -429,6 +441,12 @@ body {
 }
 
 @media (max-width: 455px) {
+  /* POP UP */
+  .popup {
+    padding: 30px;
+    max-width: 360px;
+  }
+
   /* card-wrapper */
   .players-lives h1 {
     font-size: calc(25 / 16 * 1rem);
@@ -450,9 +468,6 @@ body {
 }
 
 @media (max-width: 420px) {
-  h1 {
-    font-size: calc(30 / 16 * 1rem);
-  }
   /* card-wrapper */
 
   .card-wrapper {
@@ -504,6 +519,24 @@ body {
 }
 
 @media (max-width: 385px) {
+  /* POP UP */
+  .popup {
+    padding: 15px 15px;
+    max-width: 360px;
+  }
+  .popup h2 {
+    font-size: calc(22 / 16 * 1rem);
+  }
+
+  .popup p {
+    font-size: 1rem;
+  }
+
+  .popup button {
+    width: 90px;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
   /* card-wrapper */
 
   .card-wrapper {
