@@ -189,7 +189,54 @@ body {
   transform: rotateY(0);
 }
 
+/* Retry */
+.retry.show {
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.5s ease;
+}
 
+.retry {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.103);
+}
+
+.retry h1 {
+  color: #3b3b3b;
+  font-size: calc(25 / 16 * 1rem);
+  padding: 15px 0 30px 0;
+}
+
+.retry img {
+  width:100px;
+}
+
+.retry button {
+  width: 100px;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+  color: #fff;
+  padding: 8px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  background-image: linear-gradient(85deg, #fee382, #e49c37);
+}
+
+.retry button:hover {
+  cursor: pointer;
+
+  transform: scale(0.97);
+}
 
 /* Replay */
 
