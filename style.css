@@ -37,9 +37,8 @@ h1 {
   max-width: 500px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.103);
 }
-
-/* .silver {
-  background: -webkit-linear-gradient(#ffffff, #c9c9c9);
+.popup h2 {
+  background: -webkit-linear-gradient(#e6e6e6, #a3a3a3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -48,7 +47,7 @@ h1 {
   background: -webkit-linear-gradient(#fee382, #f3aa44);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-} */
+}
 
 /* Wrapper */
 
@@ -149,6 +148,8 @@ h1 {
 /* Footer */
 
 .footer {
+  opacity: 0;
+  pointer-events: none;
   margin-top: 50px;
 }
 .footer-link,
