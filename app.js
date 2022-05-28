@@ -1,8 +1,19 @@
-// Slectors
+// Selectors
+const popUpButton = document.querySelector(".popup button");
+const popUp = document.querySelector(".popup");
+const cardsWrapper = document.querySelector(".wrapper");
 const cards = document.querySelectorAll(".card"); // all cards
 let matchedCard = 0;
 let cardOne, cardTwo; // Select two card
 let disableDeck = false;
+
+// Hide pop up and show Memory Game
+popUpButton.onclick = () => {
+  popUp.classList.add("hide");
+  cardsWrapper.classList.add("show");
+};
+
+
 
 //Fucntion - Flip Card
 function flipCard(e) {
