@@ -1,4 +1,6 @@
 // Selectors
+const replayBox = document.querySelector(".replay");
+const replayButton = document.querySelector(".replay button");
 const popUpButton = document.querySelector(".popup button");
 const popUp = document.querySelector(".popup");
 const cardsWrapper = document.querySelector(".wrapper");
@@ -12,6 +14,7 @@ popUpButton.onclick = () => {
   popUp.classList.add("hide");
   cardsWrapper.classList.add("show");
 };
+
 
 //Fucntion - Flip Card
 function flipCard(e) {
@@ -69,6 +72,11 @@ function shuffleCard() {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
   });
+
+  setTimeout(() => {
+    cardsWrapper.classList.remove("show");
+    replayBox.classList.add("show");
+  }, 1000);
 }
 
 // Adding click event to all cards
@@ -77,3 +85,8 @@ cards.forEach((card) => {
 });
 
 // Replay Game
+
+replayButton.onclick = () => {
+  replayBox.classList.remove("show");
+  popUp.classList.remove("hide");
+};
