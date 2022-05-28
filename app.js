@@ -1,4 +1,6 @@
 // Selectors
+const playerLivesCount = document.querySelector(".playerLivesCount");
+let playerLives = 6;
 const replayBox = document.querySelector(".replay");
 const replayButton = document.querySelector(".replay button");
 const popUpButton = document.querySelector(".popup button");
@@ -21,11 +23,14 @@ function flipCard(e) {
 
   if (clickedCard !== cardOne && !disableDeck) {
     clickedCard.classList.add("flip"); // If clicked, adds the class name flip
+    //  Player lose player live
+
     if (!cardOne) {
       return (cardOne = clickedCard); //retrun the cardOne value to clickedCard
     }
     cardTwo = clickedCard;
     disableDeck = true;
+
     let cardOneImg = cardOne.querySelector("img").src;
     cardTwoImg = cardTwo.querySelector("img").src;
     matchCards(cardOneImg, cardTwoImg);
@@ -49,6 +54,8 @@ function matchCards(img1, img2) {
     return (disableDeck = false);
   }
   // if two card not matched
+  playerLives--;
+  playerLivesCount.textContent = playerLives;
   setTimeout(() => {
     // adding shake class to both after 400ms
     cardOne.classList.add("shake");
@@ -82,6 +89,10 @@ function shuffleCard() {
 cards.forEach((card) => {
   card.addEventListener("click", flipCard);
 });
+
+// IF = LIVES
+
+
 
 // Replay Game
 
