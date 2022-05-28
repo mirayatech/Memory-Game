@@ -17,12 +17,14 @@ body {
 
 /* POP UP */
 
-.popup.hide {
+/* .popup.hide {
   opacity: 0;
   pointer-events: none;
-}
+} */
 
 .popup {
+  opacity: 0;
+  pointer-events: none;
   text-align: center;
   padding: 30px;
   border-radius: 10px;
@@ -51,7 +53,6 @@ body {
   font-weight: 500;
   color: rgb(59, 59, 59);
 }
-
 
 .popup button {
   font-weight: 500;
@@ -172,6 +173,12 @@ body {
 .card.flip .back-view {
   transform: rotateY(0);
 }
+
+
+/* Replay */
+
+
+
 
 /* Footer */
 
