@@ -25,6 +25,19 @@ h1 {
   font-size: calc(60 / 16 * 1rem);
 }
 
+/* POP UP */
+
+.popup {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.103);
+}
+
 /* .silver {
   background: -webkit-linear-gradient(#ffffff, #c9c9c9);
   -webkit-background-clip: text;
