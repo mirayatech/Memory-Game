@@ -1,7 +1,7 @@
 // Selectors
 const playerLivesCount = document.querySelector(".playerLivesCount");
 let playerLives = 6;
-// const retry
+const retryBox = document.querySelector(".retry");
 const replayBox = document.querySelector(".replay");
 const replayButton = document.querySelector(".replay button");
 const popUpButton = document.querySelector(".popup button");
@@ -80,6 +80,7 @@ function matchCards(img1, img2) {
 function restartGame() {
   if (playerLives === 0) {
     cardsWrapper.classList.remove("show");
+    retryBox.classList.add("show");
   }
 }
 // Shuffle Cards
