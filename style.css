@@ -25,7 +25,7 @@ h1 {
   font-size: calc(60 / 16 * 1rem);
 }
 
-.silver {
+/* .silver {
   background: -webkit-linear-gradient(#ffffff, #c9c9c9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -35,11 +35,13 @@ h1 {
   background: -webkit-linear-gradient(#fee382, #f3aa44);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 /* Wrapper */
 
 .wrapper {
+  opacity: 0;
+  pointer-events: none;
   height: 650px;
   width: 650px;
   padding: 20px;
