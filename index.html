@@ -1,236 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon.ico"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon.ico">
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Memory Game</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Pop up Module -->
     <div class="popup">
-        <h2>Memory Game: &nbsp;<span class="gold">Clash Royale</span></h2>
-        <p>
-            In this Memory Card Game, there are 16 cards where
-            every two cards have the same images, but each card is placed randomly, and you have to find them. There is
-            no time limit to find the pairs of cards, but you only have 5 lives.
-        </p>
-        <button aria-label="Let's play button">Let's
-            Play!</button>
+      <h2>Memory Game: &nbsp;<span class="gold">Clash Royale</span></h2>
+      <p>
+        In this Memory Card Game, there are 16 cards where every two cards have
+        the same images, but each card is placed randomly, and you have to find
+        them. There is no time limit to find the pairs of cards, but you only
+        have 5 lives.
+      </p>
+      <button aria-label="Let's play button">Let's Play!</button>
     </div>
     <!-- Wrapper -->
     <div class="wrapper">
-        <!-- Player Lives -->
+      <!-- Player Lives -->
+      <div class="players-lives">
         <h1>Lives: <span class="playerLivesCount">6</span></h1>
-        <div class="card-wrapper">
-            <!-- All cards -->
-            <ul class="cards">
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-3.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-1.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-2.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-4.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-5.png" alt="card image">
-                    </div>
-                </li> <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-8.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-3.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-10.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-7.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-2.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-4.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-8.png" alt="card image">
-                    </div>
-                </li> <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-10.png" alt="card image">
-                    </div>
-                </li> <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-1.png" alt="card image">
-                    </div>
-                </li> <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-7.png" alt="card image">
-                    </div>
-                </li>
-                <!-- One Card -->
-                <li class="card">
-                    <!-- Front View -Card -->
-                    <div class="view front-view">
-                        <span class="material-icons"><i class="fa-solid fa-question"></i></span>
-                    </div>
-                    <!-- Back View - card -->
-                    <div class="view back-view">
-                        <img src="./images/Clash-Royale-5.png" alt="card image">
-                    </div>
-                </li>
-            </ul>
-        </div>
+      </div>
+      <div class="card-wrapper">
+        <!-- All cards -->
+        <ul class="cards">
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-3.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-1.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-2.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-4.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-5.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-8.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-3.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-10.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-7.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-2.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-4.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-8.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-10.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-1.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-7.png" alt="card image" />
+            </div>
+          </li>
+          <!-- One Card -->
+          <li class="card">
+            <!-- Front View -Card -->
+            <div class="view front-view">
+              <span class="material-icons"
+                ><i class="fa-solid fa-question"></i
+              ></span>
+            </div>
+            <!-- Back View - card -->
+            <div class="view back-view">
+              <img src="./images/Clash-Royale-5.png" alt="card image" />
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-
+    <!-- Retry Box -->
     <div class="retry">
-        <img src="./images/sad-face.png" alt="sad face emote from clash royale">
-        <h1>You have lost all your lives. <br> Do you want to try again?</h1> 
-        <button>Retry</button>
+      <img src="./images/sad-face.png" alt="sad face emote from clash royale" />
+      <h1>
+        You have lost all your lives. <br />
+        Do you want to try again?
+      </h1>
+      <button aria-label="Retry Button">Retry</button>
     </div>
-
     <!-- Replay Box -->
     <div class="replay">
-        <img src="./images/Clash-Royale-PNG-Clipart.png" alt="">
-        <h2>Do you want to play again?</h2>
-        <button>Replay</button>
+      <img src="./images/Clash-Royale-PNG-Picture.png" alt="" />
+      <h2>
+        You matched all the cards. <br />
+        Do you want to play again?
+      </h2>
+      <button aria-label="Replay Button">Replay</button>
     </div>
-
+    <!-- Footer -->
     <footer class="footer">
-        <a href="https://github.com/mirayaabrodi" class="footer-link" target="_blank">Build and design by Miraya
-            Abrodi</a>
+      <a
+        href="https://github.com/mirayaabrodi"
+        class="footer-link"
+        target="_blank"
+        >Build and design by Miraya Abrodi</a
+      >
     </footer>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>

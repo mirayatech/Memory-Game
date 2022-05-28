@@ -1,24 +1,30 @@
 // Selectors
-const playerLivesCount = document.querySelector(".playerLivesCount");
-let playerLives = 6;
+const popUp = document.querySelector(".popup");
+const cards = document.querySelectorAll(".card"); // all cards
 const retryBox = document.querySelector(".retry");
 const replayBox = document.querySelector(".replay");
-const replayButton = document.querySelector(".replay button");
-const popUpButton = document.querySelector(".popup button");
-const popUp = document.querySelector(".popup");
 const cardsWrapper = document.querySelector(".wrapper");
-const cards = document.querySelectorAll(".card"); // all cards
+const popUpButton = document.querySelector(".popup button");
+const retryButton = document.querySelector(".retry button");
+const replayButton = document.querySelector(".replay button");
+const playerLivesCount = document.querySelector(".playerLivesCount");
+let playerLives = 6;
 let matchedCard = 0;
 let cardOne, cardTwo; // Select two card
 let disableDeck = false;
 
-// Hide pop up and show Memory Game
+// Adding click event to all cards
+cards.forEach((card) => {
+  card.addEventListener("click", flipCard);
+});
+
+// Hide PopUp , Show MemoryGame
 popUpButton.onclick = () => {
   popUp.classList.add("hide");
   cardsWrapper.classList.add("show");
 };
 
-//Fucntion - Flip Card
+//FUNCTION - Flip Card
 function flipCard(e) {
   let clickedCard = e.target; // getting user clicked card
 
@@ -38,7 +44,7 @@ function flipCard(e) {
   }
 }
 
-// Function Match Card
+// FUNCTION - Match Cards
 function matchCards(img1, img2) {
   // if two card matches eachother
   if (img1 === img2) {
@@ -76,20 +82,30 @@ function matchCards(img1, img2) {
   }, 1200);
 }
 
-// If player lose all lives
+// FUNCTON - Player Lose All Life
 function restartGame() {
   if (playerLives === 0) {
     cardsWrapper.classList.remove("show");
     retryBox.classList.add("show");
+    playerLives = 6;
+    playerLivesCount.textContent = playerLives;
   }
 }
-// Shuffle Cards
+
+retryButton.onclick = () => {
+  cardsWrapper.classList.add("show");
+  retryBox.classList.remove("show");
+};
+
+// FUNCTION - SHuffel Cards
 function shuffleCard() {
   matchedCard = 0;
   cardOne = cardTwo = "";
   cards.forEach((card) => {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
+    playerLives = 6;
+    playerLivesCount.textContent = playerLives;
   });
 
   setTimeout(() => {
@@ -98,14 +114,10 @@ function shuffleCard() {
   }, 1000);
 }
 
-// Adding click event to all cards
-cards.forEach((card) => {
-  card.addEventListener("click", flipCard);
-});
-
 // Replay Game
-
 replayButton.onclick = () => {
+  playerLives = 6;
+  playerLivesCount.textContent = playerLives;
   replayBox.classList.remove("show");
   popUp.classList.remove("hide");
 };
