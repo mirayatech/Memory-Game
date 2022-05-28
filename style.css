@@ -188,6 +188,7 @@ body {
 .replay.show {
   opacity: 1;
   pointer-events: all;
+  transition: all 0.5s ease;
 }
 
 .replay {
@@ -208,7 +209,7 @@ body {
 .replay h2 {
   color: #3b3b3b;
   font-size: calc(35 / 16 * 1rem);
-  padding: 15px 0 30px 0;
+  padding: 5px 0 30px 0;
 }
 
 .replay img {
