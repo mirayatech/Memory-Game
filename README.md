@@ -9,3 +9,11 @@ Memory card is a simple matching cards game in which all the cards are flipped b
 * `CSS`
 * `JavaScript`
 
+## How it looks 🎥
+
+**Live:** https://clash-royale-memory-game.netlify.app/
+
+
+
+https://user-images.githubusercontent.com/71933266/170869533-4afcdeac-9e6b-47a9-97e6-ca6cc137bf5b.mp4
+
