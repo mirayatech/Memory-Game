@@ -67,7 +67,17 @@ body {
   cursor: pointer;
   transform: scale(0.97);
 }
+.author {margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding: 30px 20px 0 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 
+.author a {
+  color: #5e99fd;
+  text-decoration: none;
+}
 /* card-wrapper */
 .wrapper {
   display: flex;
@@ -428,6 +438,10 @@ body {
   /* Back view */
   .card .back-view img {
     max-width: 60px;
+  }
+
+  .author {
+    font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
