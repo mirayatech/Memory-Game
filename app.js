@@ -13,27 +13,23 @@ let matchedCard = 0;
 let cardOne, cardTwo; // Select two card
 let disableDeck = false;
 
-// Adding click event to all cards
 cards.forEach((card) => {
   card.addEventListener("click", flipCard);
 });
 
-// Hide PopUp , Show MemoryGame
 popUpButton.onclick = () => {
   popUp.classList.add("hide");
   cardsWrapper.classList.add("show");
 };
 
-//FUNCTION - Flip Card
 function flipCard(e) {
   let clickedCard = e.target; // getting user clicked card
 
   if (clickedCard !== cardOne && !disableDeck) {
-    clickedCard.classList.add("flip"); // If clicked, adds the class name flip
-    //  Player lose player live
+    clickedCard.classList.add("flip");
 
     if (!cardOne) {
-      return (cardOne = clickedCard); //retrun the cardOne value to clickedCard
+      return (cardOne = clickedCard);
     }
     cardTwo = clickedCard;
     disableDeck = true;
@@ -44,16 +40,13 @@ function flipCard(e) {
   }
 }
 
-// FUNCTION - Match Cards
 function matchCards(img1, img2) {
-  // if two card matches eachother
   if (img1 === img2) {
     matchedCard++; //increment matched value by 1
-    // if matched value is 8, user has matched all cards
     if (matchedCard == 8) {
       setTimeout(() => {
         return shuffleCard();
-      }, 500); //clalling shuffelCard after 1sec
+      }, 500);
     }
     cardOne.removeEventListener("click", flipCard);
     cardTwo.removeEventListener("click", flipCard);
@@ -68,21 +61,18 @@ function matchCards(img1, img2) {
   }, 500);
 
   setTimeout(() => {
-    // adding shake class to both after 400ms
     cardOne.classList.add("shake");
     cardTwo.classList.add("shake");
   }, 400);
 
   setTimeout(() => {
-    // romoving shake class and flip it back after 1.2sec
     cardOne.classList.remove("shake", "flip");
     cardTwo.classList.remove("shake", "flip");
-    cardOne = cardTwo = ""; //setting both card value to blank
+    cardOne = cardTwo = "";
     disableDeck = false;
   }, 1200);
 }
 
-// FUNCTON - Player Lose All Life
 function restartGame() {
   if (playerLives === 0) {
     cardsWrapper.classList.remove("show");
@@ -97,7 +87,6 @@ retryButton.onclick = () => {
   retryBox.classList.remove("show");
 };
 
-// FUNCTION - SHuffel Cards
 function shuffleCard() {
   matchedCard = 0;
   cardOne = cardTwo = "";
@@ -114,7 +103,6 @@ function shuffleCard() {
   }, 1000);
 }
 
-// Replay Game
 replayButton.onclick = () => {
   playerLives = 6;
   playerLivesCount.textContent = playerLives;
