@@ -15,5 +15,7 @@ Memory card is a simple matching cards game in which all the cards are flipped b
 
 
 
-https://user-images.githubusercontent.com/71933266/170869533-4afcdeac-9e6b-47a9-97e6-ca6cc137bf5b.mp4
+
+
+https://user-images.githubusercontent.com/71933266/175239109-034fe676-2a0a-49fe-bf78-5f1be670d996.mov
 
