@@ -82,6 +82,16 @@ function restartGame() {
   }
 }
 
+matchedCard = 0;
+cardOne = cardTwo = "";
+cards.forEach((card) => {
+  card.classList.remove("flip");
+  card.addEventListener("click", flipCard);
+  playerLives = 6;
+  playerLivesCount.textContent = playerLives;
+});
+
+
 retryButton.onclick = () => {
   cardsWrapper.classList.add("show");
   retryBox.classList.remove("show");
