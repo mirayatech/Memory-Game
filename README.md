@@ -11,7 +11,7 @@ Memory card is a simple matching cards game in which all the cards are flipped b
 
 ## How it looks 🎥
 
-**Live:** https://clash-royale-memory-game.netlify.app/
+**Live:**  https://memory-clashroyale.vercel.app/
 
 
 
